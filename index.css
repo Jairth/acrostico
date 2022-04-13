@@ -1,0 +1,93 @@
+:root {
+  --primary-theme-color: deeppink;
+  --secondary-theme-color: #282c34;
+  --text-color: #fff;
+  --primary-shadow-color: #8888;
+  --secondary-shadow-color: #21242c80;
+  --button-color: #61dafb;
+  --button-color-active: #fff;
+  --button-text-color: #000;
+  --primary-highlight: #61dafb;
+  --secondary-highlight: #ffd700;
+  --padding-section: 2em 0;
+  --padding-container: 0 2em;
+  --max-width-container: 1024px;
+  --border-radius: 0.5rem;
+  --all-transitions: all 0.5s;
+  --letter-color-1: #1ab5e4;
+  --letter-color-2: #ff0697;
+  --letter-color-3: #ff4d00;
+  --letter-color-4: #ffe600;
+  --letter-color-5: #bb00ff;
+  --letter-color-6: #f5926b;
+
+}
+
+.body {
+    background-image: linear-gradient( 111.5deg,  rgba(249,230,1,1) 9.9%, rgba(249,144,1,1) 19.4%, rgba(255,22,22,1) 29.2%, rgba(255,22,133,1) 37.7%, rgba(255,22,197,1) 47.7%, rgba(232,22,255,1) 53.9%, rgba(162,22,255,1) 60%, rgba(80,22,255,1) 68.8%, rgba(22,104,255,1) 74.2%, rgba(22,168,255,1) 77.6%, rgba(22,255,220,1) 86.7%, rgba(22,255,179,1) 92.5%, rgba(22,255,109,1) 97.1%, rgba(92,255,22,1) 103.5% );
+    font-family: monospace;
+    margin: 0;
+}
+.main {
+    width: 100%;
+}
+
+.cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.cover__name {
+    font-size: 5rem;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.cover__name-letter {
+    position: relative;
+    transition: var(--all-transitions);
+}
+
+.cover__name-letter:hover {
+    filter: brightness(1000%);
+}
+
+.cover__name-letter:nth-child(1){
+    color: var(--letter-color-1);
+}
+
+.cover__name-letter:nth-child(2){
+    color: var(--letter-color-4);
+}
+
+.cover__name-letter:nth-child(3){
+    color: var(--letter-color-5);
+}
+
+.cover__name-letter:nth-child(4){
+    color: var(--letter-color-3);
+}
+
+.cover__name-letter::before {
+    content: var(--letter);
+    position: absolute;
+    transform: scale(1.125);
+    filter: blur(1rem);
+}
+
+.cover__name-letter::after {
+    content: var(--letter);
+    position: absolute;
+    top: 80%;
+    left: 0;
+    filter: blur(0.25rem);
+    transform: rotateX(125deg);
+}
+
+@media (min-width: 854px) {
+    .cover__name {
+        font-size: 8rem;
+    }
+}
